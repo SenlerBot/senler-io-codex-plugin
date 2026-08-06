@@ -1,0 +1,43 @@
+{
+  "name": "senler-io",
+  "version": "0.1.0",
+  "description": "Hosted Senler.io API MCP plugin with OAuth authentication and project-scoped access.",
+  "author": {
+    "name": "Senler",
+    "url": "https://senler.io/"
+  },
+  "homepage": "https://senler.io/",
+  "repository": "https://github.com/SenlerBot/senler-io-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "senler",
+    "senler-io",
+    "mcp",
+    "oauth",
+    "api"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Senler.io",
+    "shortDescription": "Use Senler.io API tools through hosted MCP",
+    "longDescription": "Connect Codex to the hosted Senler.io MCP server. OAuth grants project-scoped Senler.io API access; project context is handled by the MCP server.",
+    "developerName": "Senler",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://senler.io/",
+    "defaultPrompt": [
+      "Inspect my Senler.io MCP tools",
+      "Show my current Senler.io project",
+      "Draft a safe Senler.io API action plan"
+    ],
+    "brandColor": "#0299E0",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

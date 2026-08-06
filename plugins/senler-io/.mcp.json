@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "senler-io": {
+      "type": "http",
+      "url": "https://mcp-senler-io.senler.io/mcp?auth_mode=oauth",
+      "oauth_resource": "https://mcp-senler-io.senler.io/mcp",
+      "note": "Hosted Senler.io API MCP server. Uses OAuth on first connection. The selected Senler.io project is stored in the OAuth credential and project context is injected by the MCP server."
+    }
+  }
+}
