@@ -1,6 +1,6 @@
 {
   "name": "senler-io",
-  "version": "0.1.0",
+  "version": "0.1.0+codex.20260807141747",
   "description": "Hosted Senler.io API MCP plugin with OAuth authentication and project-scoped access.",
   "author": {
     "name": "Senler",
@@ -33,6 +33,7 @@
     "defaultPrompt": [
       "Inspect my Senler.io MCP tools",
       "Show my current Senler.io project",
+      "Switch my Senler.io project",
       "Draft a safe Senler.io API action plan"
     ],
     "brandColor": "#0299E0",

@@ -22,3 +22,11 @@ Use the Senler.io MCP server for Senler.io API work.
 - Do not ask the user for OAuth tokens. The MCP server handles OAuth credentials.
 - Do not pass hidden context such as project ID or authorization token unless the MCP tool explicitly asks for it. The server injects project context from OAuth when possible.
 - Keep identifiers visible in summaries so the user can verify the target project, member, channel, lead, or object before a write.
+
+## Connection and Project Context
+
+- At the start of a new Senler.io task, call `connection_status` when it is available. Tell the user which project is connected using its name and ID before continuing with project data or actions.
+- If no credential is connected, use `connect_account` to start OAuth. Never ask the user to paste an OAuth token.
+- To change the connected project, confirm the user's intent, call `disconnect_account`, then call `connect_account` and let the user select the new project in OAuth. Verify the result with `connection_status` before performing other actions.
+- Do not tell the user to remove or reinstall the plugin merely to disconnect or switch projects.
+- Before any write, explicitly identify the connected project from `connection_status` so the user can verify the target.
