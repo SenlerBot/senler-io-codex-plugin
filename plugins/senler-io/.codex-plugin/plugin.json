@@ -1,6 +1,6 @@
 {
   "name": "senler-io",
-  "version": "0.1.0+codex.20260807141747",
+  "version": "0.1.0+codex.20260807145339",
   "description": "Hosted Senler.io API MCP plugin with OAuth authentication and project-scoped access.",
   "author": {
     "name": "Senler",
@@ -21,13 +21,14 @@
   "interface": {
     "displayName": "Senler.io",
     "shortDescription": "Use Senler.io API tools through hosted MCP",
-    "longDescription": "Connect Codex to the hosted Senler.io MCP server. OAuth grants project-scoped Senler.io API access; project context is handled by the MCP server.",
+    "longDescription": "Connect Codex to the hosted Senler.io MCP server. OAuth grants project-scoped access, and an interactive connection card shows the current project and lets users switch or disconnect.",
     "developerName": "Senler",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
       "Read",
-      "Write"
+      "Write",
+      "Connection management"
     ],
     "websiteURL": "https://senler.io/",
     "defaultPrompt": [

@@ -25,8 +25,10 @@ Use the Senler.io MCP server for Senler.io API work.
 
 ## Connection and Project Context
 
-- At the start of a new Senler.io task, call `connection_status` when it is available. Tell the user which project is connected using its name and ID before continuing with project data or actions.
+- When the user asks about the current connection, call `show_connection` so Codex displays the interactive project card. Use `get_current_project` when a compact text-only check is more appropriate.
+- Before a write, identify the current project with `get_current_project` when the project has not already been established in the conversation.
 - If no credential is connected, use `connect_account` to start OAuth. Never ask the user to paste an OAuth token.
-- To change the connected project, confirm the user's intent, call `disconnect_account`, then call `connect_account` and let the user select the new project in OAuth. Verify the result with `connection_status` before performing other actions.
+- Prefer the card buttons for switching projects or disconnecting. The switch button revokes the current MCP access and refresh tokens, then asks Codex to start OAuth again so the user can select another project.
+- If interactive UI is unavailable, use the text fallback: confirm the user's intent, call `disconnect_account`, make a new protected Senler.io request to start OAuth, then verify with `get_current_project`.
 - Do not tell the user to remove or reinstall the plugin merely to disconnect or switch projects.
-- Before any write, explicitly identify the connected project from `connection_status` so the user can verify the target.
+- Never claim that switching succeeded until `get_current_project` reports the newly selected project.
