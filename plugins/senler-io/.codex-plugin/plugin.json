@@ -1,7 +1,7 @@
 {
   "name": "senler-io",
-  "version": "0.1.0+codex.20260807145339",
-  "description": "Hosted Senler.io API MCP plugin with OAuth authentication and project-scoped access.",
+  "version": "0.1.0+codex.20260819021852",
+  "description": "Hosted Senler.io project MCP plugin with OAuth authentication and project-scoped access.",
   "author": {
     "name": "Senler",
     "url": "https://senler.io/"
@@ -19,23 +19,22 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Senler.io",
-    "shortDescription": "Use Senler.io API tools through hosted MCP",
-    "longDescription": "Connect Codex to the hosted Senler.io MCP server. OAuth grants project-scoped access, and an interactive connection card shows the current project and lets users switch or disconnect.",
+    "displayName": "Senler.io Project",
+    "shortDescription": "Work inside one selected Senler.io project",
+    "longDescription": "Connect Codex to the hosted Senler.io project MCP server. Native OAuth grants access only to the project selected during authorization.",
     "developerName": "Senler",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
       "Read",
       "Write",
-      "Connection management"
+      "Project-scoped OAuth"
     ],
     "websiteURL": "https://senler.io/",
     "defaultPrompt": [
-      "Inspect my Senler.io MCP tools",
       "Show my current Senler.io project",
-      "Switch my Senler.io project",
-      "Draft a safe Senler.io API action plan"
+      "Inspect this project's Senler.io data",
+      "Draft a safe Senler.io project action plan"
     ],
     "brandColor": "#0299E0",
     "composerIcon": "./assets/icon.svg",

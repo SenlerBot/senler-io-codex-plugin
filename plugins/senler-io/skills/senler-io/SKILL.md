@@ -27,8 +27,7 @@ Use the Senler.io MCP server for Senler.io API work.
 
 - When the user asks about the current connection, call `show_connection` so Codex displays the interactive project card. Use `get_current_project` when a compact text-only check is more appropriate.
 - Before a write, identify the current project with `get_current_project` when the project has not already been established in the conversation.
-- If no credential is connected, use `connect_account` to start OAuth. Never ask the user to paste an OAuth token.
-- Prefer the card buttons for switching projects or disconnecting. The switch button revokes the current MCP access and refresh tokens, then asks Codex to start OAuth again so the user can select another project.
-- If interactive UI is unavailable, use the text fallback: confirm the user's intent, call `disconnect_account`, make a new protected Senler.io request to start OAuth, then verify with `get_current_project`.
-- Do not tell the user to remove or reinstall the plugin merely to disconnect or switch projects.
+- Native OAuth is started and managed by the MCP client. Never ask the user to paste an OAuth token and never invent model-callable authorization tools.
+- If authorization is missing or expired, explain that the user must reconnect this MCP server in the client, then retry the protected request.
+- Project switching is also managed by reconnecting the MCP server in the client and selecting another project during OAuth.
 - Never claim that switching succeeded until `get_current_project` reports the newly selected project.
